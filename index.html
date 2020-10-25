@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>JS 2.1</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/myscript.js"></script>
+</head>
+<body>
+  <div class="titulo">
+    <img src="assets\images\logo2.png" alt="logo" wth=220 height=60>
+    <h1>Sistema para Controle de Gastos e Despesas</h1>
+  </div>
+  <button class="btn_balanco" onclick="fnbalanco()"><span>Balanço</span></button>
+  <div class="quadrado">
+  </div>
+
+  <div nome="paginainteira">
+    <div class="secao">
+    <table class="tables">
+      <tr>
+        <td><img class="imgsecao" src="assets\images\registro.png" alt="logo"><h2 class="registros">Registros</h2></td>
+      </tr>
+      <tr class="linharegistros">
+        <td><h2 class="txtganhos">Ganhos</h2></td>
+        <td><h2 class="txtdespesas">Despesas</h2></td>
+      </tr>
+      <tr>
+        <td>
+          <form name="cadganho" class="tabledados" action="" method="">
+            <p>Valor: </p>
+            <input type="text" name="inputvalor" class="inputvalor" value="" placeholder="Valor">
+            <br>
+            <p>Observação: </p>
+            <input type="text" name="inputobs" class="inputobs"value="" placeholder="Ex: Manutenção">
+            <br>
+            <p>Data: </p>
+            <input type="date" name="inputdata" class="inputdata"value="" placeholder="Data">
+            <br>
+            <button type="button" name="enviar" class="btnenviar" onclick="fncadganho()">Cadastrar</button>
+            <button type="reset" name="limpaganho" class="btnzeraespacos">Limpar</button>
+          </form>
+        </td>
+        <td>
+          <form name="caddespesa" class="tabledados" action="" method="">
+            <p>Valor: </p>
+            <input type="text" name="inputvalor" class="inputvalor"value="" placeholder="Valor">
+            <br>
+            <p>Observação: </p>
+            <input type="text" name="inputobs" class="inputobs"value="" placeholder="Ex: Manutenção">
+            <br>
+            <p>Data: </p>
+            <input type="date" name="inputdata" class="inputdata"value="" placeholder="Data">
+            <br>
+            <button type="button" name="enviar" class="btnenviar" onclick="fncaddespesa()">Cadastrar</button>
+            <button type="reset" name="limpadespesa" class="btnzeraespacos">Limpar</button>
+          </form>
+        </td>
+      </tr>
+    </table>
+  </div>
+    <div class="secao">
+    <table class="tables">
+      <tr>
+        <td><img class="imgsecao" src="assets\images\consulta.png" alt="consultas"><h2 class="consultas">Consultas</h2></td>
+      </tr>
+      <tr>
+        <td><h2 class="txtganhosganhos">Ganhos</h2></td>
+        <td><h2 class="txtdespesas">Despesas</h2></td>
+      </tr>
+      <tr>
+        <td>
+          <table class="tabledados" border=1>
+            <thead>
+              <tr>
+                <td>Valor</td>
+                <td>Observação</td>
+                <td>Data</td>
+              </tr>
+            </thead>
+            <tbody class="infoGD">
+            <script>fnexibeval()</script>
+          </tbody>
+          </table>
+        </td>
+        <td>
+          <table class="tabledados" border=1>
+            <thead>
+              <tr class="teste">
+                <td>Valor</td>
+                <td>Observação</td>
+                <td>Data</td>
+              </tr>
+            </thead>
+            <tbody class="infoGD">
+            <script>fnexibeval()</script>
+          </tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table class="tables">
+      <tr>
+        <td><button class="tabledados" onclick="fnzerarganhos()">Zerar Ganhos</button></td>
+        <td><button class="tabledados" onclick="fnzerardespesas()">Zerar Despesas</button></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td><button class="tabledados" id="botaoExcluiDados" onclick="fnzerartudo()">Zerar todos os Gastos e Despesas</button></td>
+      </tr>
+    </table>
+  </div>
+  </div>
+</body>
+</html>
